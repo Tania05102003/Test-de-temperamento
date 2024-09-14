@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Temperamento</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hidden { display: none; }
+        .result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Test de Temperamento</h1>
+    <form id="temperamentForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required><br><br>
+
+        <h3>1. En una situación donde se deben delegar responsabilidades, ¿Usted asume el rol de líder o prefiere seguir instrucciones?</h3>
+        <input type="radio" name="q1" value="sanguineo" required> Sí, Amo ser el que lidera.<br>
+        <input type="radio" name="q1" value="colerico"> Si nadie se anima, yo asumo el liderazgo.<br>
+        <input type="radio" name="q1" value="flematico"> No, Prefiero seguir instrucciones.<br>
+        <input type="radio" name="q1" value="melancolico"> Si nadie se anima, yo animo a alguien a liderar.<br><br>
+
+        <h3>2. ¿Es impulsivo a la hora de tomar decisiones importantes?</h3>
+        <input type="radio" name="q2" value="colerico" required> Sí. Muchísimo.<br>
+        <input type="radio" name="q2" value="sanguineo"> Sí cuando algo me gusta mucho.<br>
+        <input type="radio" name="q2" value="flematico"> No. Primero calculo riesgos.<br>
+        <input type="radio" name="q2" value="melancolico"> No. Soy muy indeciso y no logro tomar decisiones rápidas.<br><br>
+
+        <h3>3. ¿Qué tan fácil es para usted expresar sus sentimientos?</h3>
+        <input type="radio" name="q3" value="sanguineo" required> Puedo expresarlos con facilidad en cualquier conversación porque entro rápido en confianza.<br>
+        <input type="radio" name="q3" value="flematico"> Puedo expresarlos con mi grupo cercano de amigos y familia.<br>
+        <input type="radio" name="q3" value="melancolico"> No me gusta expresarlos con frecuencia.<br>
+        <input type="radio" name="q3" value="melancolico"> Me cuesta mucho expresar mis emociones a otros. Prefiero hacerlo por medios escritos.<br><br>
+
+        <h3>4. ¿Se considera el tipo de persona capaz de guardar un secreto?</h3>
+        <input type="radio" name="q4" value="flematico" required> No. Me cuesta mucho.<br>
+        <input type="radio" name="q4" value="melancolico"> Sí, pero cuando alguien me ha insistido mucho en no contarlo.<br>
+        <input type="radio" name="q4" value="sanguineo"> Sí. Creo que soy confiable.<br>
+        <input type="radio" name="q4" value="colerico"> Sí. Soy totalmente confiable.<br><br>
+
+        <h3>5. ¿Cómo actúa frente al peligro?</h3>
+        <input type="radio" name="q5" value="melancolico" required> Me da miedo. Probablemente salga corriendo.<br>
+        <input type="radio" name="q5" value="colerico"> Lo enfrento.<br>
+        <input type="radio" name="q5" value="flematico"> Pienso en las alternativas que tengo y lo enfrento.<br>
+        <input type="radio" name="q5" value="sanguineo"> Espero a que otros reaccionen primero.<br><br>
+
+        <h3>6. ¿Sería capaz de perdonar una infidelidad?</h3>
+        <input type="radio" name="q6" value="sanguineo" required> Sí. A cualquiera le puede pasar.<br>
+        <input type="radio" name="q6" value="melancolico"> No lo creo. Es algo que me costaría mucho perdonar.<br>
+        <input type="radio" name="q6" value="flematico"> Solo si el otro se esfuerza mucho por conseguirlo.<br>
+        <input type="radio" name="q6" value="melancolico"> Lo intentaría, pero no olvidaría lo que me hizo.<br><br>
+
+        <h3>7. ¿Puede decirse que es una persona que tiende a exagerar las situaciones?</h3>
+        <input type="radio" name="q7" value="sanguineo" required> Sí. Muchísimo.<br>
+        <input type="radio" name="q7" value="melancolico"> No. Para nada.<br>
+        <input type="radio" name="q7" value="flematico"> Un poco.<br>
+        <input type="radio" name="q7" value="sanguineo"> Sí. Bastante.<br><br>
+
+        <h3>8. ¿Considera que la disciplina es esencial para alcanzar una meta?</h3>
+        <input type="radio" name="q8" value="flematico" required> Algunas veces. Me parece que el carisma es más importante.<br>
+        <input type="radio" name="q8" value="colerico"> Sí. Se necesita disciplina y método para lograr los planes.<br>
+        <input type="radio" name="q8" value="melancolico"> Sí. Es muy necesaria, pero me cuesta trabajo disciplinarme.<br>
+        <input type="radio" name="q8" value="sanguineo"> Sí. Ha sido clave para lograr lo que me he propuesto.<br><br>
+
+        <h3>9. ¿Qué es lo más importante para usted en la vida?</h3>
+        <input type="radio" name="q9" value="sanguineo" required> Tener buenas relaciones sociales y lograr una imagen correcta en los demás.<br>
+        <input type="radio" name="q9" value="flematico"> Aprovechar bien el tiempo. Sentir que no lo desperdicio.<br>
+        <input type="radio" name="q9" value="melancolico"> La tranquilidad y el descanso.<br>
+        <input type="radio" name="q9" value="colerico"> Que todas las cosas que realice queden perfectas.<br><br>
+
+        <h3>10. Cuando un jefe le hace una observación negativa a su desempeño laboral, ¿qué pasa?</h3>
+        <input type="radio" name="q10" value="flematico" required> Me da igual. Se me olvida rápido.<br>
+        <input type="radio" name="q10" value="colerico"> Le llevo la contraria y le explico por qué no estoy de acuerdo.<br>
+        <input type="radio" name="q10" value="melancolico"> Se me baja el ánimo, pero no me gusta entrar en conflicto.<br>
+        <input type="radio" name="q10" value="melancolico"> Lo reconozco, pero me da durísimo porque soy muy crítico conmigo mismo.<br><br>
+
+        <button type="submit">Obtener Resultados</button>
+    </form>
+
+    <div class="result hidden" id="result"></div>
+
+    <script>
+        const characteristics = {
+            sanguineo: "Extrovertido, entusiasta, y sociable. Les gusta estar rodeados de gente y disfrutan de la vida.",
+            colerico: "Líder natural, decidido y competitivo. No temen tomar decisiones y pueden ser impacientes.",
+            melancolico: "Reflexivo, analítico y a menudo perfeccionista. Pueden ser sensibles y emocionales.",
+            flematico: "Calmado, equilibrado y confiable. Prefieren evitar conflictos y son buenos mediadores."
+        };
+
+        document.getElementById('temperamentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const results = { sanguineo: 0, colerico: 0, melancolico: 0, flematico: 0 };
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+
+            for (let [key, value] of formData.entries()) {
+                results[value]++;
+            }
+
+            const total = Object.values(results).reduce((a, b) => a + b, 0);
+            let resultHTML = `<h2>Resultados</h2>`;
+            let maxTemperament = '';
+            let secondMaxTemperament = '';
+            let maxScore = 0;
+            let secondMaxScore = 0;
+
+            for (const [temperament, score] of Object.entries(results)) {
+                const percentage = ((score / total) * 100).toFixed(2);
+                resultHTML += `<p>${temperament.charAt(0).toUpperCase() + temperament.slice(1)}: ${percentage}%</p>`;
+                
+                // Determinar el temperamento con mayor y segundo puntaje
+                if (score > maxScore) {
+                    secondMaxScore = maxScore;
+                    secondMaxTemperament = maxTemperament;
+                    maxScore = score;
+                    maxTemperament = temperament;
+                } else if (score > secondMaxScore) {
+                    secondMaxScore = score;
+                    secondMaxTemperament = temperament;
+                }
+            }
+
+            // Mostrar el nombre y características del temperamento dominante y segundo
+            if (maxTemperament) {
+                resultHTML += `<h3>${name}, tu temperamento es ${maxTemperament.charAt(0).toUpperCase() + maxTemperament.slice(1)}:</h3>`;
+                resultHTML += `<p>${characteristics[maxTemperament]}</p>`;
+            }
+
+            if (secondMaxTemperament) {
+                resultHTML += `<h4>Tu segundo temperamento es ${secondMaxTemperament.charAt(0).toUpperCase() + secondMaxTemperament.slice(1)}:</h4>`;
+                resultHTML += `<p>${characteristics[secondMaxTemperament]}</p>`;
+            }
+
+            document.getElementById('result').innerHTML = resultHTML;
+            document.getElementById('result').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
+
+            }
+
+            // Mostrar características del temperamento dominante
+            if (maxTemperament) {
+                resultHTML += `<h3>Características del temperamento ${maxTemperament.charAt(0).toUpperCase() + maxTemperament.slice(1)}:</h3>`;
+                resultHTML += `<p>${characteristics[maxTemperament]}</p>`;
+            }
+
+            document.getElementById('result').innerHTML = resultHTML;
+            document.getElementById('result').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
